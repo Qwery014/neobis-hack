@@ -1,22 +1,22 @@
-import React from "react";
+import React, { ReactNode } from "react";
 
 import { Route, Routes } from "react-router-dom";
 
-import HomePage from "./pages/HomePage";
+import HomePage from "./pages/HomePage/HomePage";
 
-type typeRoute = {
+interface interfaceRoute {
+  id: number,
   link: string,
-  element: <HomePage />,
-id: number,
+  element: ReactNode,
 }
 
 
 const MainRoutes = () => {
-  const PUBLIC_ROUTES = [
+  const PUBLIC_ROUTES: interfaceRoute[] = [
     {
+      id: 1,
       link: "/",
       element: <HomePage />,
-      id: 1,
     }
   ];
   return (

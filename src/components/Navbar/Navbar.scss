@@ -1,0 +1,66 @@
+.nav {
+  .container {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__logo {
+    padding: 8px 0;
+    font-family: "Nunito", Arial;
+    font-weight: 800;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  &__right {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+  }
+  &__btn {
+    padding: 6px 27px;
+    height: calc(100% - 16px);
+    display: flex;
+    align-items: center;
+    background-color: var(--blue);
+    color: #fff;
+    border-radius: 100px;
+    font-weight: 700;
+  }
+  &__profile {
+    font-size: 18px;
+    color: var(--black);
+    display: grid;
+    align-items: end;
+    grid-gap: 0 12px;
+    grid-template-areas:
+      ". picture"
+      ". picture";
+    text-align: right;
+    &:hover {
+      text-decoration: underline;
+    }
+    &-name {
+      font-weight: 500;
+      // Ограничение количества строк. Количество строк указывать в line-clamp и -webkit-line-clamp //
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      line-clamp: 1;
+      -webkit-line-clamp: 1;
+      width: 200px;
+      text-overflow: ellipsis;
+    }
+    &-email {
+      align-self: start;
+    }
+    &_pic {
+      transition: 0.2s;
+      width: 60px;
+      height: 60px;
+      grid-area: picture;
+      border-radius: 100px;
+      overflow: hidden;
+    }
+  }
+}
